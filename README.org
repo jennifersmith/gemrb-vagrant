@@ -1,0 +1,51 @@
+* gemrb vagrant
+
+A very very early attempt to get gemrb running Baldur's Gate with
+vagrant/virtualbox/ubuntu.
+
+
+To run:
+
+#+BEGIN_SRC bash
+
+vagrant up
+
+#+END_SRC
+
+Wait a long time then...
+
+#+BEGIN_SRC bash
+
+vagrant ssh
+
+sudo /etc/init.d/vboxadd setup
+
+logout
+
+vagrant reload
+
+vagrant ssh
+
+#+END_SRC
+
+(that reload failed for me once then seemed to work)
+
+Test audio:
+
+#+BEGIN_SRC  bash
+
+wget http://www.villagegeek.com/downloads/webwavs/alfred_good_evening.wav
+
+ossplay alfred_good_evening.wav
+
+#+END_SRC
+
+Test video:
+
+#+BEGIN_SRC 
+sudo apt-get install x11-apps
+xeyes
+#+END_SRC
+
+
+
