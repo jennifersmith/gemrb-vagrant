@@ -1,13 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("baldursgate") do |config|
+Vagrant.configure("2") do |config|
 
   config.ssh.forward_x11 = true # useful since some audio testing programs use x11
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.provision :shell, :inline => $BOOTSTRAP_SCRIPT # see below
-  config.vm.synced_folder "/Applications/Baldurs\ Gate\ 1.app/", "/bg/"
 
   # enable audio drivers on VM settings
   config.vm.provider :virtualbox do |vb|
@@ -40,5 +39,12 @@ $BOOTSTRAP_SCRIPT = <<EOF
     sudo reboot
     touch ~/runonce
   fi
+
+  #echo "*****gemrb*****"
+  #sudo apt-get install -y software-properties-common python-software-properties
+  #sudo add-apt-repository -y ppa:sao/ppa 
+  #sudo apt-get update 
+  #sudo apt-get install -y gemrb 
+  
 EOF
 
