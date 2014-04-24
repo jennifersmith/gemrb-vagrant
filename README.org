@@ -47,5 +47,12 @@ sudo apt-get install x11-apps
 xeyes
 #+END_SRC
 
+Now install gemrb (yes it could go in bootstrap but whatevers).
+
+#+BEGIN_SRC 
+
+/vagrant/gemrb.sh
+
+#+END_SRC
 
 
