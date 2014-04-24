@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, '--audio', 'coreaudio', '--audiocontroller', 'hda'] # choices: hda sb16 ac97
   end
 
+  # assumes you hae your game data in the same place as me - installed by gog
+  config.vm.synced_folder "/Applications/Baldurs\ Gate\ 1.app/", "/bg/"
+
 end
 
 $BOOTSTRAP_SCRIPT = <<EOF
@@ -40,11 +43,6 @@ $BOOTSTRAP_SCRIPT = <<EOF
     touch ~/runonce
   fi
 
-  #echo "*****gemrb*****"
-  #sudo apt-get install -y software-properties-common python-software-properties
-  #sudo add-apt-repository -y ppa:sao/ppa 
-  #sudo apt-get update 
-  #sudo apt-get install -y gemrb 
   
 EOF
 

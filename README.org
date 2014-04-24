@@ -55,4 +55,20 @@ Now install gemrb (yes it could go in bootstrap but whatevers).
 
 #+END_SRC
 
+Test it:
 
+#+BEGIN_SRC 
+
+gemrb -c /vagrant/fhs.cfg
+
+#+END_SRC
+
+Run bg:
+
+#+BEGIN_SRC 
+
+ gemrb -c /vagrant/gemrb-bg1.cfg
+
+#+END_SRC
+
+It's tiny but I cant be arsed to make it bigger.
