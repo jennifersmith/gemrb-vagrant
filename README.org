@@ -71,4 +71,13 @@ Run bg:
 
 #+END_SRC
 
-It's tiny but I cant be arsed to make it bigger.
+
+* Widescreen
+
+Follows http://www.gibberlings3.net/readmes/readme-widescreen.html
+#+BEGIN_SRC 
+
+sudo apt-get install unzip
+wget http://www.weidu.org/~thebigg/WeiDU-Linux-236.zip
+
+#+END_SRC
